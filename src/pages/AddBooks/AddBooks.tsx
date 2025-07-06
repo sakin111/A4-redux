@@ -31,6 +31,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { BookSchema, type bookData } from "@/components/Schema/book.schema";
 import { toast, Toaster } from "sonner";
+import { useNavigate } from "react-router";
 
 
 
@@ -51,6 +52,7 @@ const defaultValues: bookData = {
 const AddBooks = () => {
   const [createBooks, { isLoading }] = useCreateBooksMutation();
   const [open, setOpen] = useState(false); 
+  const navigate = useNavigate()
 
   const form = useForm<bookData>({
     resolver: zodResolver(BookSchema),
@@ -65,6 +67,7 @@ const AddBooks = () => {
     try {
       const res = await createBooks(bookData).unwrap();
        toast.success("✅ Book added successfully!");
+       navigate("/allBooks")
       console.log("Book added:", res);
       form.reset();
       setOpen(false);
