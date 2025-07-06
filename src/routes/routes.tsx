@@ -4,6 +4,7 @@ import AllBooks from "@/pages/AllBooks/AllBooks";
 import AddBooks from "@/pages/AddBooks/AddBooks";
 import BorrowSummary from "@/pages/BorrowSummary/BorrowSummary";
 import Root from "./Root";
+import DetailView from "@/pages/AllBooks/DetailView";
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path:"/addBooks",
                 element: <AddBooks></AddBooks>
+            },
+            {
+                path:"/books/:id",
+                element:<DetailView></DetailView>
             },
             {
                 path:"/borrowSummary",

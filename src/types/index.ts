@@ -1,4 +1,5 @@
 export interface IBook {
+  _id: string 
   title: string;
   author: string;
   genre: string;
@@ -6,4 +7,10 @@ export interface IBook {
   description?: string;
   copies: number;
   available: boolean;
+}
+
+export interface IBorrow {
+  
+  quantity: number;
+  dueDate: string; 
 }
