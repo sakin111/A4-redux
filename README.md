@@ -1,69 +1,88 @@
-# React + TypeScript + Vite
+# 📚 A4 Redux Library Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, full-featured library management system built with **React**, **Redux Toolkit**, **TypeScript**, and **Vite**.  
+Easily manage books, borrowing, and user preferences with a beautiful UI and robust state management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔍 **Browse All Books**: View, search, and filter the entire library collection.
+- 📖 **Book Details**: See detailed information for each book.
+- ➕ **Add Books**: Add new books to the library with validation.
+- ✏️ **Edit Books**: Update book information with ease.
+- 📦 **Borrow Books**: Borrow books and track due dates.
+- 📊 **Borrow Summary**: View a summary of all borrowed books.
+- 🌗 **Theme Toggle**: Switch between light, dark, and system themes.
+- ⚡ **Fast & Responsive**: Built with Vite and Tailwind CSS for instant feedback and a great mobile experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1. Clone the repository
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/a4-redux-library.git
+cd a4-redux-library
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at [http://localhost:5173](http://localhost:5173).
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** & **TypeScript**
+- **Redux Toolkit** (RTK Query for API calls)
+- **Vite** (blazing fast dev/build)
+- **Tailwind CSS** (utility-first styling)
+- **Zod** (schema validation)
+- **Lucide Icons** (modern icon set)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+  components/      # Reusable UI components
+  pages/           # Page components (Home, AllBooks, AddBooks, etc.)
+  redux/           # Redux slices and API logic
+  shared/          # Shared utilities and widgets
+  routes/          # App routing
+  types/           # TypeScript types and interfaces
+  provider/        # Theme and context providers
+```
+
+---
+
+## 🌙 Theme Support
+
+Switch between **Light**, **Dark**, and **System** themes using the toggle in the header.
+
+
+
+## 🙏 Acknowledgements
+
+- [React](https://react.dev/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+---
+
+> Made with ❤️ for learning and productivity!
