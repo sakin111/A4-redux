@@ -47,7 +47,7 @@ const BorrowModal = ({ open, setOpen, book }: BorrowProps ) => {
 const onSubmit = async (data: BorrowFormValues) => {
   try {
     await borrowBooks({
-      
+      bookId: book._id,
       quantity: Number(data.quantity),
       dueDate: data.dueDate,
     }).unwrap();
