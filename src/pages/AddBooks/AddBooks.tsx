@@ -66,8 +66,9 @@ const AddBooks = () => {
     };
     try {
       const res = await createBooks(bookData).unwrap();
+        navigate("/allBooks")
        toast.success("✅ Book added successfully!");
-       navigate("/allBooks")
+     
       console.log("Book added:", res);
       form.reset();
       setOpen(false);
