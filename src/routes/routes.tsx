@@ -1,13 +1,11 @@
-import { createBrowserRouter } from "react-router";
+
 import Home from "../pages/Home/Home";
 import AllBooks from "@/pages/AllBooks/AllBooks";
 import AddBooks from "@/pages/AddBooks/AddBooks";
 import BorrowSummary from "@/pages/BorrowSummary/BorrowSummary";
 import Root from "./Root";
 import DetailView from "@/pages/AllBooks/DetailView";
-
-
-
+import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
     {
